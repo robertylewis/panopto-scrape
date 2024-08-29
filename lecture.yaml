@@ -1,218 +1,329 @@
 lectures:
-- date: 9/6
-  downloads:
-  - name: Ch. 0 demo file
-    url: https://github.com/BrownCS1951x/fpv2023/blob/master/LoVe/Lectures/LoVe00_Preface_Demo.lean
-  recording:
-  - url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=b1d4c695-80bf-48ce-a150-b05f013c1617&v=1
-  summary: 'We''ll talk about what Lean is and see what it can do, and also go over
-    some organizational points about the course. <br><br> Takeaways: Verified programming
-    is fun and powerful!'
-  topic: Introduction
-- date: 9/11
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=b2d6b8b5-a38b-40a6-b7d7-b0760147a510&v=1
-  summary: 'In this lecture we''ll learn the basics of the Lean programming and specification
-    language: types and terms, type inhabitation, and writing and evaluating very
-    simple functional programs. No proving yet!'
-  topic: The basics of Lean syntax
-- date: 9/13
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=59c0b64f-b9c7-400b-b426-b0760147a57e&v=1
-  summary: 'We''ll finish Chapter 2 of the HHG, and get a head start on some material
-    from Chapter 4. Today''s topics: inductive types (continued), function definition
-    and evaluation, specifications, and dependent type theory.'
-  topic: Dependent type theory
-- date: 9/18
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=94425edd-4e7b-401d-a1f9-b0760147a596&v=1
-  summary: 'We''ll dive into the meat of the HHG Ch. 3: what are some of the moves
-    available to us in the tactic proving minigame, beyond <code>intro</code> and
-    <code>apply</code>? How do we deal with logical connectives: <code>And</code>,
-    <code>Or</code>, <code>Not</code>, and so on?'
-  topic: Backward (tactic) proofs
-- date: 9/20
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=907c9806-cfc9-4a50-a0f9-b0760147a5af&v=1
-  summary: We'll continue talking about tactic proofs. How do we deal with <i>equality</i>?
-    What about the natural numbers? We'll also talk about <i>classical vs constructive</i>
-    logic.
-  topic: Backward (tactic) proofs, contd.
-- date: 9/25
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=85860b6d-94f4-4d40-b22c-b0760147a5c7&v=1
-  summary: 'We''ll see another way to write proofs in Lean, incorporating <i>forward
-    reasoning</i>. Structured ("proof-term") proofs are a little closer to the underlying
-    logic. Surprise: proofs in Lean are, literally, just terms in the type theory.'
-  topic: Forward proofs
-- date: 9/27
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=02e8e19d-99e0-4090-ace1-b0760147a5e3&v=1
-  summary: 'We talked about dependent types before; now, more. The type theory that
-    Lean is based on, the Calculus of Inductive Constructions, is an instance of dependent
-    type theory. In DTT, we follow the PAT principle: propositions as types, proofs
-    as terms. (Buzzword: the Curry-Howard correspondence!) we''ll look deeper today
-    into these foundations. Time permitting, we''ll look at a few important algorithms,
-    including <em>unification</em>.'
-  topic: Dependent types
-- date: 10/2
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c086a6aa-7861-47ac-80b0-b0760147a5fe&v=1
-  summary: Chapter 5 of the Hitchhiker's Guide introduces some paradigms &mdash; inductive
-    types, structures, recursive definitions, type classes &mdash; that might be familiar
-    from other functional programming languages. The interesting thing for us is how
-    these paradigms interact with writing proofs. For instance, how do we mix <i>properties</i>
-    into <i>data structures</i>?
-  topic: 'Functional programming: data structures'
-- date: 10/4
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=dabf54d7-32a6-4a8d-a487-b0760147a617&v=1
-  summary: 'Type classes are a language feature inspired by Haskell with equivalents
-    in Scala, ML, and other languages. They allow us a kind of <i>ad hoc polymorphism</i>:
-    we can define functions on types that implement certain interfaces, and can declare
-    that certain types implement these interfaces, without bundling the interfaces
-    into the data type itself. we''ll see how this interacts with some of the data
-    structures we like to use, as we implement and specify functions on these types.'
-  topic: 'Functional programming: type classes, lists, trees'
-- date: 10/11
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=84438974-97ba-4d17-a41a-b0760147a64a&v=1
-  summary: 'We''ll cover ch. 6 of the Hitchhiker''s Guide today, on inductive predicates.
-    This will complete what we need to know about foundations for now: inductive predicates
-    give us a way to introduce new propositions and prove things about them. Inductive
-    predicates are also the source of most of the propositional symbols we''ve used
-    so far &mdash; <code>And</code>, <code>Or</code>, <code>Exists</code>, <code>Eq</code>,
-    &hellip;.'
-  topic: Inductive predicates
-- date: 10/16
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3c287d01-4294-4ed3-b93f-b0760147a664&v=1
-  summary: We're jumping ahead to Chapter 9 today! Time to start putting what we've
-    learned into practice. We'll define the syntax of a toy programming language inside
-    of Lean, discussing the difference between shallow and deep embeddings. Using
-    inductive predicates, we'll define a transition system and use this to prove things
-    about the execution of programs in this toy language.
-  topic: Big-step operational semantics
-- date: 10/18
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1246c045-c022-44c4-a3ad-b0760147a67c&v=1
-  summary: The big-step semantics we saw on Monday aren't fine-grained. We can't reason
-    about intermediate states. An alternative is using a small-step semantics, where
-    our program execution path is broken down much further. This comes with upsides
-    and downsides.
-  topic: Small-step operational semantics
-- date: 10/23
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=20d4023b-6775-4dfa-aca4-b0760147a69c&v=1
-  summary: We'll talk theory today, about the data structures and process flow that
-    underlie a proof assistant. Basically, we'll think about Lean as a programming
-    language in the sense of the last two lectures. What's its syntax? What are its
-    <em>semantics</em>??
-  topic: A look under the hood
-- date: 10/25
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=71cbee54-e5c8-47df-9d00-b0760147a6b6&v=1
-  summary: As this course has progressed, we've gotten some insight into the foundations
-    of Lean and its type theory. But some features have remained mysterious. In the
-    next few lectures we'll poke some more at this foundational theory. Today we'll
-    be focusing in particular on the type universe <code>Prop</code>, what we're allowed
-    and disallowed in this universe compared to the others.
-  topic: Logical foundations
-- date: 10/30
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=21a10ba7-5043-4457-851c-b0760147a6db&v=1
-  summary: We'll jump ahead again to chapter 13, where we'll start talking about algebraic
-    structures. But we'll also improvise a bit here. After we see some basic structures,
-    we'll define some mathematical types of our own.
-  topic: Algebraic structures
-- date: 11/1
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6e803ad8-dd61-4faa-bcf5-b0760147a6f7&v=1
-  summary: We'll continue the Ch 13 material we started last time, including a little
-    more with the complex number playground. We'll also talk about embeddings between
-    different numerical structures, and some different kinds of "set-like" objects.
-  topic: Numbers and sets
-- date: 11/6
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=976085e4-d92f-4a6f-98f9-b0760147a711&v=1
-  summary: 'We''ll continue with chapter 12 today, talking about more foundational
-    constructs. As we discussed last class, there''s a grab bag of features that we
-    can take or leave: proof irrelevance, impredicative Prop, the axiom of choice,
-    and others. Why should we be convinced that the collection we choose is consistent?
-    We''ll introduce the notion of a model of the type theory to answer questions
-    like this.'
-  topic: Logical foundations, contd.
-- date: 11/8
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=fc65d896-4cfd-4d8e-8a7d-b0760147a72b&v=1
-  summary: The last bit of Ch. 12, on quotient types, is very relevant to what we
-    want to do next! We'll wrap up that discussion (including talking a bit about
-    the computability properties of quotients) and then immediately use quotient types
-    to define some familiar things. Rational and real numbers are interesting mathematically,
-    and for programming purposes, they can be a very convenient tool for writing specifications.
-    Even if we don't compute with real numbers they're useful to have around.
-  topic: Quotients, rationals, and reals
-- date: 11/13
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=cd2090bf-5962-4bcf-ae82-b0760147a748&v=1
-  summary: 'We finished last week with the rational numbers. Now we need to complete
-    them to get the reals. This will take yet another quotient. The reals bring to
-    light some computability issues that we''ve touched on briefly before: what does
-    it mean to compute with real numbers? How do we do it in normal languages? If
-    time permits, we''ll look at mathlib''s implementation of the reals and see some
-    generalizations.'
-  topic: Real numbers
-- date: 11/15
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=b7b1eb0d-9890-45e9-a44c-b0760147a763&v=1
-  summary: 'Chapters 7 and 8: metaprogramming, TBD.'
-  topic: Monads and tactics
-- date: 11/20
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=18a242a7-88f2-4eab-bbf5-b0760147a783&v=1
-  summary: 'Chapters 7 and 8: metaprogramming, TBD.'
-  topic: Monads and tactics
-- date: 11/27
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=72e243f4-df2d-49e8-bb88-b0760147a7c7&v=1
-  summary: 'Chapters 7 and 8: metaprogramming, TBD.'
-  topic: Monads and tactics
-- date: 11/29
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5a302dc9-647c-41df-becc-b0760147a7eb&v=1
-  summary: 'Chapters 7 and 8: metaprogramming, TBD.'
-  topic: Tactic design strategies
-- date: 12/4
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=b19d530f-654c-4a27-9475-b0760147a804&v=1
-  summary: Guest lecture, TBD.
-  topic: Guest lecture
-- date: 12/6
-  downloads: []
-  recording:
-    url: https://brown.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4f5a1e6a-5d03-4a11-8346-b0760147a81c&v=1
-  summary: Guest lecture, TBD.
-  topic: Guest lecture
+  - date: 9/4
+    downloads: []
+    # - name: Ch. 0 demo file
+    # - notes: LoVe00_Preface.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe00_Preface_Demo.lean
+    recording:
+    - url: 3d8f2e23-26e0-43bd-ae0e-b1d9017e901f
+    summary: |
+      We'll talk about what Lean is and see what it can do, and also go over
+      some organizational points about the course. <br><br> Takeaways: Verified programming
+      is fun and powerful!
+    topic: Introduction
+  - date: 9/9
+    downloads: []
+    # - name: Ch. 1-2 demo file
+    # - notes: LoVe01_02_TypesAndTerms_DemoMaster.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe01_02_TypesAndTerms_DemoMaster.lean
+    recording:
+    - url: 830f0056-4155-4260-9ee7-b1d9017e908c
+    summary: |
+      In this lecture we'll learn the basics of the Lean programming and specification
+      language: types and terms, type inhabitation, and writing and evaluating very
+      simple functional programs. No proving yet!"
+    topic: The basics of Lean syntax
+  - date: 9/11
+    downloads: []
+    # - name: Ch. 1-2 demo file
+    # - notes: LoVe01_02_TypesAndTerms_DemoMaster.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe01_02_TypesAndTerms_DemoMaster.lean
+    recording:
+    - url: e9676188-7b6f-44b9-9ce2-b1d9017e90bd
+    summary: |
+      We'll finish Chapter 2 of the HHG, and get a head start on some material
+      from Chapter 4. Today's topics: inductive types (continued), function definition
+      and evaluation, specifications, and dependent type theory.
+    topic: Dependent type theory
+  - date: 9/16
+    downloads: []
+    # - name: Ch. 3 demo file
+    # - notes: LoVe03_BackwardProofs_Demo.lean
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe03_BackwardProofs_Demo.lean
+    recording:
+    - url: 58e9441c-ac66-457f-8d46-b1d9017e90e3
+    summary: |
+      We'll dive into the meat of the HHG Ch. 3: what are some of the moves
+      available to us in the tactic proving minigame, beyond <code>intro</code> and
+      <code>apply</code>? How do we deal with logical connectives: <code>And</code>,
+      <code>Or</code>, <code>Not</code>, and so on?
+    topic: Backward (tactic) proofs
+  - date: 9/18
+    downloads: []
+    # - name: Ch. 3 demo file
+    # - notes: LoVe03_BackwardProofs_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe03_BackwardProofs_Demo.lean
+    recording:
+    - url: bc93d0ea-768a-4e67-ac2c-b1d9017e90f6
+    summary: |
+      We'll continue talking about tactic proofs. How do we deal with <i>equality</i>?
+      What about the natural numbers? We'll also talk about <i>classical vs constructive</i>
+      logic.
+    topic: Backward (tactic) proofs, contd.
+  - date: 9/23
+    downloads: []
+    # - name: Ch. 4 demo file
+    # - notes: LoVe04_ForwardProofs_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe04_ForwardProofs_Demo.lean
+    recording:
+    - url: 8724ecdd-828f-4709-87e5-b1d9017e911d
+    summary: |
+      We'll see another way to write proofs in Lean, incorporating <i>forward
+      reasoning</i>. Structured ("proof-term") proofs are a little closer to the underlying
+      logic. Surprise: proofs in Lean are, literally, just terms in the type theory.
+    topic: Forward proofs
+  - date: 9/25
+    downloads: []
+    # - name: Ch. 4 demo file
+    # - notes: LoVe04_ForwardProofs_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe04_ForwardProofs_Demo.lean
+    recording:
+    - url: 544addca-a1c6-4501-bdd6-b1d9017e913e
+    summary: |
+      We talked about dependent types before; now, more. The type theory that
+      Lean is based on, the Calculus of Inductive Constructions, is an instance of dependent
+      type theory. In DTT, we follow the PAT principle: propositions as types, proofs
+      as terms. (Buzzword: the Curry-Howard correspondence!) We'll look deeper today
+      into these foundations. Time permitting, we'll look at a few important algorithms,
+      including <em>unification</em>.
+    topic: Dependent types
+  - date: 9/30
+    downloads: []
+    # - name: Ch. 5 demo file
+    # - notes: LoVe05_FunctionalProgramming_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe05_FunctionalProgramming_Demo.lean
+    recording:
+    - url: d573472e-d0b3-4f40-8196-b1d9017e9165
+    summary: |
+      Chapter 5 of the Hitchhiker's Guide introduces some paradigms &mdash; inductive
+      types, structures, recursive definitions, type classes &mdash; that might be familiar
+      from other functional programming languages. The interesting thing for us is how
+      these paradigms interact with writing proofs. For instance, how do we mix <i>properties</i>
+      into <i>data structures</i>?
+    topic: "Functional programming: data structures"
+  - date: 10/2
+    downloads: []
+    # - name: Ch. 5 demo file
+    # - notes: LoVe05_FunctionalProgramming_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe05_FunctionalProgramming_Demo.lean
+    recording:
+    - url: ae979d64-5872-4c12-bc8a-b1d9017e9189
+    summary: |
+      Type classes are a language feature inspired by Haskell with equivalents
+      in Scala, ML, and other languages. They allow us a kind of <i>ad hoc polymorphism</i>:
+      we can define functions on types that implement certain interfaces, and can declare
+      that certain types implement these interfaces, without bundling the interfaces
+      into the data type itself. we'll see how this interacts with some of the data
+      structures we like to use, as we implement and specify functions on these types.
+    topic: "Functional programming: type classes, lists, trees"
+  - date: 10/7
+    downloads: []
+    # - name: Ch. 6 demo file
+    # - notes: LoVe06_InductivePredicates_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe06_InductivePredicates_Demo.lean
+    recording:
+    - url: ce217923-3d54-4343-98f5-b1d9017e91ae
+    summary: |
+      We'll cover ch. 6 of the Hitchhiker's Guide today, on inductive predicates.
+      This will complete what we need to know about foundations for now: inductive predicates
+      give us a way to introduce new propositions and prove things about them. Inductive
+      predicates are also the source of most of the propositional symbols we've used
+      so far &mdash; <code>And</code>, <code>Or</code>, <code>Exists</code>, <code>Eq</code>,
+      &hellip;.
+    topic: Inductive predicates
+  - date: 10/9
+    downloads: []
+    # - name: Ch. 9 demo file
+    # - notes: LoVe09_OperationalSemantics_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe09_OperationalSemantics_Demo.lean
+    recording:
+    - url: 898d6a1e-568d-4826-87aa-b1d9017e91cf
+    summary: |
+      We're jumping ahead to Chapter 9 today! Time to start putting what we've
+      learned into practice. We'll define the syntax of a toy programming language inside
+      of Lean, discussing the difference between shallow and deep embeddings. Using
+      inductive predicates, we'll define a transition system and use this to prove things
+      about the execution of programs in this toy language.
+    topic: Big-step operational semantics
+  - date: 10/16
+    downloads: []
+    # - name: Ch. 9 demo file
+    # - notes: LoVe09_OperationalSemantics_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe09_OperationalSemantics_Demo.lean
+    recording:
+    - url: bdaffebb-cb06-4ee7-bcec-b1d9017e9216
+    summary: |
+      The big-step semantics we saw on Monday aren't fine-grained. We can't reason
+      about intermediate states. An alternative is using a small-step semantics, where
+      our program execution path is broken down much further. This comes with upsides
+      and downsides.
+    topic: Small-step operational semantics
+  - date: 10/21
+    downloads: []
+    # - name: Ch. XX demo file
+    # - notes: LoVeXX_ALookUnderTheHood_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVeXX_ALookUnderTheHood_Demo.lean
+    recording:
+    - url: 2f8fa9a9-8f50-4eab-8b68-b1d9017e923c
+    summary: |
+      We'll talk theory today, about the data structures and process flow that
+      underlie a proof assistant. Basically, we'll think about Lean as a programming
+      language in the sense of the last two lectures. What's its syntax? What are its
+      <em>semantics</em>??
+    topic: A look under the hood
+  - date: 10/23
+    downloads: []
+    # - name: Ch. 12 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe12_LogicalFoundationsOfMathematics_Demo.lean
+    # - name: Russellian paradox demo
+    # - notes: LoVe12_LogicalFoundationsOfMathematics_Demo.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe12_Russell.lean
+    recording:
+    - url: 3128c104-57cb-440e-b7af-b1d9017e925d
+    summary: |
+      As this course has progressed, we've gotten some insight into the foundations
+      of Lean and its type theory. But some features have remained mysterious. In the
+      next few lectures we'll poke some more at this foundational theory. Today we'll
+      be focusing in particular on the type universe <code>Prop</code>, what we're allowed
+      and disallowed in this universe compared to the others.
+    topic: Logical foundations
+  - date: 10/28
+    downloads: []
+    # - name: Ch. 13 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe13_BasicMathematicalStructures_Demo.lean
+    # - name: Complex numbers playground
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/Complex.lean
+    recording:
+    - url: 4ca02170-13c6-4520-aa31-b1d9017e927a
+    summary: |
+      We'll jump ahead again to chapter 13, where we'll start talking about algebraic
+      structures. But we'll also improvise a bit here. After we see some basic structures,
+      we'll define some mathematical types of our own.
+    topic: Algebraic structures
+  - date: 10/30
+    downloads: []
+    # - name: Ch. 13 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe13_BasicMathematicalStructures_Demo.lean
+    # - name: Complex numbers playground
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/Complex.lean
+    recording:
+    - url: e7d44c69-bbe1-42f7-b8a5-b1d9017e9297
+    summary: |
+      We'll continue the Ch 13 material we started last time, including a little
+      more with the complex number playground. We'll also talk about embeddings between
+      different numerical structures, and some different kinds of "set-like" objects.
+    topic: Numbers and sets
+  - date: 11/4
+    downloads: []
+    # - name: Ch. 12 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe12_LogicalFoundationsOfMathematics_Demo.lean
+    # - name: Ch. 13 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe13_BasicMathematicalStructures_Demo.lean
+    # - name: Complex numbers playground
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/Complex.lean
+    recording:
+    - url: 76b3b469-92ef-4c5a-8890-b1d9017e92af
+    summary: |
+      We'll continue with chapter 12 today, talking about more foundational
+      constructs. As we discussed last class, there's a grab bag of features that we
+      can take or leave: proof irrelevance, impredicative Prop, the axiom of choice,
+      and others. Why should we be convinced that the collection we choose is consistent?
+      We'll introduce the notion of a model of the type theory to answer questions
+      like this.
+    topic: Logical foundations, contd.
+  - date: 11/6
+    downloads: []
+    # - name: Ch. 12 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe12_LogicalFoundationsOfMathematics_Demo.lean
+    # - name: Ch. 14 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe14_RationalAndRealNumbers_Demo.lean
+    recording:
+    - url: a1b92949-ad09-4342-b08c-b1d9017e92cd
+    summary: |
+      The last bit of Ch. 12, on quotient types, is very relevant to what we
+      want to do next! We'll wrap up that discussion (including talking a bit about
+      the computability properties of quotients) and then immediately use quotient types
+      to define some familiar things. Rational and real numbers are interesting mathematically,
+      and for programming purposes, they can be a very convenient tool for writing specifications.
+      Even if we don't compute with real numbers they're useful to have around.
+    topic: Quotients, rationals, and reals
+  - date: 11/11
+    downloads: []
+    # - name: Ch. 14 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe14_RationalAndRealNumbers_Demo.lean
+    recording:
+    - url: 2bdabda3-a94a-4aea-846d-b1d9017e92e9
+    summary: |
+      We finished last week with the rational numbers. Now we need to complete
+      them to get the reals. This will take yet another quotient. The reals bring to
+      light some computability issues that we've touched on briefly before: what does
+      it mean to compute with real numbers? How do we do it in normal languages? If
+      time permits, we'll look at mathlib's implementation of the reals and see some
+      generalizations.
+    topic: Real numbers
+  - date: 11/13
+    downloads: []
+    # - name: Ch. 7 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe07_EffectfulProgramming_Demo.lean
+    recording:
+    - url: aed55ac0-7521-4d2a-8252-b1d9017e930a
+    summary: |
+      Lean has a very powerful framework for writing custom tactics.
+      These tactics are written in Lean itself, with a number of catches to make
+      this possible. Today we'll see the fundamentals of this approach. We'll
+      learn the (very) basics about monads, a technique used in some functional
+      languages to simulate programming with side effects. (But this isn't an FP
+      class and we're not going to dwell on monads, beyond what we need to know.)
+      Chapter 7 of the HHG is a more detailed introduction to monads.
+    topic: Monads and tactics
+  - date: 11/18
+    downloads: []
+    # - name: Ch. 8 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe08_Metaprogramming_Demo.lean
+    recording:
+    - url: 8e9a9bee-65a6-4cb1-926f-b1d9017e9327
+    summary: |
+      More from chapters 7 and 8 of the HHG. We'll look at <em>macros</em>, a simple kind of metaprogram.
+      Then we'll turn our attention to the <code>TacticM</code> monad, which provides an API for interacting
+      with our context and goals.
+    topic: Monads and tactics
+  - date: 11/20
+    downloads: []
+    # - name: Ch. 8 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe08_Metaprogramming_Demo.lean
+    recording:
+    - url: c9970e94-dbfa-42b3-918a-b1d9017e934e
+    summary: |
+      We'll continue our discussion of metaprogramming by implementing a few custom tactics. Along the way,
+      we'll see some more metaprogramming techniques and a few "imperative-like" features of monads that make
+      our lives easier when writing tactics.
+    topic: Monads and tactics
+  - date: 11/25
+    downloads: []
+    # - name: Ch. 8 demo file
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/LoVe08_Metaprogramming_Demo.lean
+    recording:
+    - url: de2f026f-927b-4a07-ab54-b1d9017e936b
+    summary: |
+      Metaprogramming TBD
+    topic: Monads and tactics
+  - date: 12/2
+    downloads: []
+    recording:
+    - url: c0cc0d8b-5203-4c4d-8b5e-b1d9017e93a9
+    summary: ""
+    topic: Guest lecture TBD
+  - date: 12/4
+    downloads: []
+    # - name: Tactic strategies demo file
+    # - notes: TacticStrategies.html
+    # url: https://github.com/BrownCS1951x/fpv2024/blob/main/LoVe/Lectures/TacticStrategies.lean
+    recording:
+    - url: 0cc52d03-8382-459e-a9df-b1d9017e93d9
+    summary: |
+      The tactics we've seen so far manipulate the tactic state in stages.
+      Today we'll consider some high level designs for automation: proof by certificate
+      and proof by reflection. We'll also talk about the strategy and algorithm behind
+      the tactic <code>linarith</code>, a great example of a "large" metaprogram
+      that shows off a number of interesting design principles.
+    topic: Tactic design strategies
