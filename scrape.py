@@ -21,7 +21,7 @@ for course_code, sessions in courses.items():
     for session in sessions:
         session_date = datetime.fromtimestamp(int(session['StartTime'][6:-5])).strftime('%B %d')
         topic = "Topic description here"  # Replace with actual topic description or link
-        recording_id = session["SessionID"]
+        recording_id = session["DeliveryID"]
         
         yaml_data.append({
             'date': session_date,

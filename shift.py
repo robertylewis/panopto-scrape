@@ -1,6 +1,28 @@
 import yaml
 from datetime import datetime
 
+class folded_str(str): pass
+
+# class literal_str(str): pass
+
+# def change_style(style, representer):
+#     def new_representer(dumper, data):
+#         scalar = representer(dumper, data)
+#         scalar.style = style
+#         return scalar
+#     return new_representer
+
+def str_presenter(dumper, data):
+    try:
+        dlen = len(data.splitlines())
+        if (dlen > 1):
+            return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='|')
+    except TypeError as ex:
+        return dumper.represent_scalar('tag:yaml.org,2002:str', data)
+    return dumper.represent_scalar('tag:yaml.org,2002:str', data)
+
+yaml.add_representer(str, str_presenter)
+
 # Load the lecture data from csci_1951x_lectures.yaml
 with open('csci 1951x_lectures.yaml', 'r') as yaml_file:
     csci_1951x_lectures = yaml.safe_load(yaml_file)['lectures']
